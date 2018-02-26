@@ -1,0 +1,13 @@
+/.env
+/.htaccess
+/cache
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+cgi-bin
+/composer.phar
+/index.php
+npm-debug.log
+

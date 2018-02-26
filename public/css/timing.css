@@ -1,0 +1,140 @@
+a.nohref {
+  cursor: pointer;
+  position: relative;
+}
+
+.bestt {
+    font-weight: bold;
+}
+
+body {
+    font-size: 12px;
+}
+
+.checkbox,
+.radio {
+    margin-top: inherit;
+    margin-bottom: inherit;
+}
+
+div.dataTables_wrapper div.dataTables_filter {
+    font-size: 12px;
+    text-align: center;
+}
+
+div.dataTables_wrapper div.dataTables_filter input {
+    height: 22px;
+}
+
+div.dt-buttons {
+  float: right;
+  margin-left:10px;
+  width: initial;
+}
+
+.dropdown-menu,
+.navbar-nav {
+    font-size: 14px;
+}
+
+.dropdown-menu>li>a.Columns,
+.dropdown-menu>li>a.Grouping,
+.dropdown-menu>li>a.Options,
+.dropdown-menu>li>a.Source {
+    padding-left: 40px;
+}
+
+@media (max-width: 767px) {
+    .navbar-nav .open .dropdown-menu>li>a.Columns,
+    .navbar-nav .open .dropdown-menu>li>a.Grouping,
+    .navbar-nav .open .dropdown-menu>li>a.Options,
+    .navbar-nav .open .dropdown-menu>li>a.Source {
+        padding-left: 45px;
+    }
+}
+
+.modal-body {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.table-condensed td,
+.table-condensed th {
+  font-size: 75%;
+}
+
+.table-condensed th {
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 13px;
+    }
+
+    .table-condensed td,
+    .table-condensed th {
+      font-size: 75%;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        font-size: 14px;
+    }
+
+    .table-condensed td,
+    .table-condensed th {
+      font-size: 85%;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 14px;
+    }
+
+    .table-condensed td,
+    .table-condensed th {
+      font-size: 100%;
+    }
+}
+
+.table-condensed > thead > tr > th,
+.table-condensed > tbody > tr > th,
+.table-condensed > tfoot > tr > th,
+.table-condensed > thead > tr > td,
+.table-condensed > tbody > tr > td,
+.table-condensed > tfoot > tr > td {
+  padding: 1px;
+}
+
+table.dataTable.table-condensed > thead > tr > th {
+  padding-right: 1px;
+}
+
+table.dataTable.table-condensed .sorting,
+table.dataTable.table-condensed .sorting_asc,
+table.dataTable.table-condensed .sorting_desc {
+  padding-right: 10px;
+}
+
+table.dataTable.table-condensed .sorting:after,
+table.dataTable.table-condensed .sorting_asc:after,
+table.dataTable.table-condensed .sorting_desc:after {
+  top: 1px;
+  right: 1px;
+}
+
+table.dataTable tr.group > td > a {
+  color: #FFFFFF;
+}
+
+table.dataTable tr.group > td > a:hover {
+  color: #e0e0e0;
+}
+
+table.dataTable tr.group > td {
+  color: #FFFFFF;
+  background-color: #337ab7;
+}
