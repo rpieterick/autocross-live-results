@@ -43,8 +43,7 @@ XML PHP Extension
 ```
 PHP 7 with opcache enabled is recommended for optimal performance.
 
-Additionally, you will need [Composer Dependency Manager](https://getcomposer.org/) installed and console access to run composer commands.
-If you are using shared hosting and there is a one-click installer for Laravel or Symfony, that may be your best option to get Composer if it is not already installed.
+You will also need console access during the installation to run php commands.
 
 The web server or hosting environment will require network access to the HTTP address and port of the timing source unless using a local file as your live timing source.
 
@@ -64,9 +63,11 @@ $ git checkout master
 ```
 
 Run the following commands to complete the installation of Laravel after cloning this repo.
+The first command checks if your PHP installation meets the requirements for [Composer Dependency Manager](https://getcomposer.org/).
 
 ```
-$ composer install --no-dev
+$ php composer-setup.php --check
+$ php composer.phar install --no-dev
 $ cp .env.example .env
 ```
 Edit the .env file and set APP_URL to the HTTP address that will be used for the application.

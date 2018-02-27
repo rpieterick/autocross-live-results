@@ -32,18 +32,18 @@
     },
     "scripts": {
         "post-root-package-install": [
-            "/usr/local/bin/php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
-            "/usr/local/bin/php artisan key:generate"
+            "@php artisan key:generate"
         ],
         "post-install-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postInstall",
-            "/usr/local/bin/php artisan optimize"
+            "@php artisan optimize"
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
-            "/usr/local/bin/php artisan optimize"
+            "@php artisan optimize"
         ]
     },
     "config": {
