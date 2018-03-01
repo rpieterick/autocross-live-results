@@ -43,6 +43,8 @@ XML PHP Extension
 ```
 PHP 7 with opcache enabled is recommended for optimal performance.
 
+cURL PHP Extension is required when accessing timing sources via HTTP.
+
 You will also need console access during the installation to run php commands.
 
 The web server or hosting environment will require network access to the HTTP address and port of the timing source unless using a local file as your live timing source.
@@ -70,8 +72,9 @@ $ php composer-setup.php --check
 $ php composer.phar install --no-dev
 $ cp .env.example .env
 ```
-Edit the .env file and set APP_URL to the HTTP address that will be used for the application.
+
 Run the following command to generate a new encryption key for Laravel to use.
+
 ```
 $ php artisan key:generate
 ```
@@ -79,21 +82,40 @@ $ php artisan key:generate
 ### Initial Configuration
 
 Copy the provided example configuration:
+
 ```
 $ cp config/timing.php.example config/timing.php
 ```
+
+The [PHP built-in web server](http://php.net/manual/en/features.commandline.webserver.php) can be used for testing locally.  Use "php artisan serve" to start it.
+
+```
+$ php artisan serve --host=127.0.0.1 --port=8000
+```
+
+__WARNING:__ The PHP built-in web server should not be used on a public network.
+
+Edit the .env file and set APP_URL to the HTTP address that will be used for the application.
+The default APP_URL can be used for testing locally with the built-in web server listening on port 8000.
+
 You should now be able to open the app in a browser using the address you set for APP_URL in the .env file.
 
 __REMINDER:__ Document root for the APP_URL address needs to be the "public" folder under the directory where you cloned or copied this repository.
+This is set automatically when testing with "php artisan serve".
 
-The source "Sample 1" is accessed as a local file.  The other sources are accessed via HTTP using the address set for APP_URL.
+After verifying the installation and initial configuration were successful, you can customize the settings in config/timing.php including timing sources, categories and indexed classes.
 
 NOTE: The example configuration contains PAX indexes for the current season.  The sample sources use indexes from the 2017 season.
 Therefore calculated values such as indexed or PAX times for individual runs in an indexed class will differ from those in the Total column of the sample source.
 
-After verifying the installation and initial configuration were successful, you can customize the settings in config/timing.php including timing sources, categories and indexed classes.
+### Timing Sources
 
-Open the sample html files in the "public/samples" directory for examples of supported live timing formats.  Formats with links to separate pages for each class are not supported.
+Autocross Live Results is designed to work with common AXWare live timing formats.
+Open the sample html files in the "public/samples" directory for examples of supported live timing formats.
+Formats with links to separate pages for each class are not supported.
+
+NOTE: The sample sources are defined as local files in the example configuration.
+Defining them as URLs when using the PHP built-in web server is not supported because a request to itself would hang.
 
 ### File and Folder Permissions
 

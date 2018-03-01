@@ -152,8 +152,10 @@ $(document).ready(function()
     {
         "ajax": {
             "url": requrl,
+            "type": "POST",
+            "headers": {'X-CSRF-TOKEN': $('meta[name="csrf_token"]').attr('content')},
             "data": function ( d ) {
-                return $.extend( {}, d, fromQueryString() );
+                return $.extend( {}, d, fromQueryString(), {'_method': 'GET'} );
             },
             "dataSrc": function ( json )
             {

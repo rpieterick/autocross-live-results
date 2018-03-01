@@ -2,6 +2,8 @@
 *.css linguist-vendored
 *.scss linguist-vendored
 *.js linguist-vendored
+composer-setup.php linguist-vendored
+composer.phar linguist-vendored
 public/css/timing*.css linguist-vendored=false
 public/js/timing*.js linguist-vendored=false
 public/samples/* linguist-vendored

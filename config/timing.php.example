@@ -11,8 +11,9 @@ return [
     // timing sources and their local paths or URLs
     'source' => [
         'Sample 1' => public_path().'/samples/sample1.html',
-        'Sample 2' => config('app.url').'/samples/sample2.html',
-        'Sample 3' => config('app.url').'/samples/sample3.html',
+        'Sample 2' => public_path().'/samples/sample2.html',
+        'Sample 3' => public_path().'/samples/sample3.html',
+        //'Some Region' => "http://timing.someregion.org/",
     ],
     
     // classes in lowercase and their category
